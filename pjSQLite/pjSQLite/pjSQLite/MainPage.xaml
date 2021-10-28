@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="pjSQLite.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#262626" Padding="15" CornerRadius="0">
+            <Label Text="Manipulação de dados em arquivo" 
+                   HorizontalTextAlignment="Center" TextColor="White" 
+                   FontSize="24"/>
+        </Frame>
+        <StackLayout>
+            <TableView Intent="Form">
+                <TableRoot>
+                    <TableSection Title="Cadastro">
+                        <EntryCell x:Name="TxtEmail"
+                           Label="Email" 
+                           Placeholder="Digite o email" 
+                           Keyboard="Email"/>
+                        <SwitchCell x:Name="SwitchEnviaEmail"
+                            Text="Enviar E-Mail?"
+                            On="True"/>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            <Button Text="Verificar" Margin="20"
+                    Padding="15"
+                    Clicked="Button_Clicked" />
+            <Label x:Name="LabelEmail" 
+                       BackgroundColor="Beige" 
+                       FontSize="20"
+                       FontAttributes="Bold" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
